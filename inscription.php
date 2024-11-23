@@ -82,6 +82,7 @@
             border: 2px solid #5B73EA;
             background: #F2F2F7;
             margin-top: 2px;
+            padding-left: 5px;
         }
         #boutton {
             width: 200px;
@@ -97,26 +98,38 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
             <div id="logo"><a href=" <!-- Si logo pressé mais pas de compte ouvert, -> redirection page login --> ">Logo</a></div>
             <div id="container_inscription_barre_connexion">
-                <div id="s_inscrire"><a href="">S'inscrire</a></div>
+                <div id="s_inscrire"><a href="inscription.php">S'inscrire</a></div>
                 <div id="barre_séparation_onglets_header"><a href=""></a></div>
-                <div id="se_connecter"><a href="">Se connecter</a></div>
+                <div id="se_connecter"><a href="connexion.php">Se connecter</a></div>
             </div>
         </nav>
     </header>
+
     <section>
-        <h2 id="connexion">Connexion</h2>
+        <h2 id="connexion">Inscription </h2>
+
         <form action="" method="post" id="formulaire">
+            <label for="nom_utilisateur">Nom d'utilisateur</label>
+            <input type="text" name"nom_utilisateur" id="nom_utilisateur" class="saisies">
+
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email" class="saisies">
+
             <label for="mdp">Mot de Passe</label>
             <input type="text" name="mdp" id="mdp" class="saisies">
+
+            <label for="confirmation_mdp">Confirmation du mot de Passe</label>
+            <input type="text" name="confirmation_mdp" id="confirmation_mdp" class="saisies">
+
             <button id="boutton">Se connecter</button>
         </form>
     </section>
 </body>
+
 </html>
